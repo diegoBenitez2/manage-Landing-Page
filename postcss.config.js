@@ -1,4 +1,5 @@
-const cssnext = require('postcss-cssnext')
 module.exports = {
-  plugins: [postcss]
+  plugins:[
+   require ('postcss-cssnext')
+  ]
 }
