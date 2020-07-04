@@ -1,0 +1,30 @@
+.banner{
+  background: $BrightRed;
+  padding: 3em 0;
+.container{
+  align-items: center;
+  justify-content: space-between;
+}
+  &__title{
+    color: $VaryLightGray;
+    padding-right: 5em;
+    position: relative;
+    font-weight: 700;
+    font-size: 2em;
+  }
+  &__btn{
+    background: $VaryLightGray;
+    color: $BrightRed;
+    width: 180px;
+    font-size: .8em;
+    font-weight: 700;
+    border-radius: 30px;
+    border: 0;
+    padding:1em 2em;
+    &:hover{
+      color: hsla(12, 88%, 59%,.5);
+    }
+  }
+    
+
+}

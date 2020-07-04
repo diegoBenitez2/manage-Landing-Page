@@ -1,0 +1,46 @@
+.whats{
+  display: flex;
+  // justify-content: space-between;
+  &__btn{
+    @include button;
+    height: 3em;
+  }
+   &__description{
+    border: 1px solid blue;
+    width: 55%;
+    padding-right: 10em;
+    &__question{
+    @include titleH2;
+    }
+    &__asnwer{
+      padding-right: 8em;
+      @include description;
+
+    }
+  }
+  &__list{
+    border: 1px solid red;
+    width: 45%;
+    .list{
+      &__description{
+        margin-left: 1.5em;
+        h6{
+        color: $VeryDarkBlue;
+        font-size: 1em;
+        font-weight: bold;
+        margin-bottom: 1em;
+        }
+        &_items{
+          @include description;
+        }
+      }
+  }
+
+  }
+ 
+  .row-md-4 {
+    margin-bottom: 2em;
+  }
+  
+}
+  

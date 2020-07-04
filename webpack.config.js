@@ -34,7 +34,7 @@ module:{
     },
     {
       test:/\.(scss|sass|css)$/,
-      exclude:/node_modules/,
+        
       loaders:[
         'style-loader',
         'css-loader',
@@ -43,16 +43,15 @@ module:{
       ]
     },
     {
-      test:/\.(png|jpg|gif)$/,
-      use:[
-        {
+      test:/\.(png|jpg|gif|svg)$/,
         loader:'file-loader',
           options:{
-            outputPath:'images/',
-            publicPath:'images/'
+            outputPath:'assets/images/',
+            publicPath:'assets/images/'
           }
-        }
-      ]
+        
+        
+      
     }
   ]
 },

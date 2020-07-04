@@ -1,0 +1,19 @@
+.header{
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid red;
+  padding: 2em 0;
+  &__button{
+    @include button;
+  }
+  .nav-link{
+    color: $VeryDarkBlue;
+    font-weight: 500;
+    margin: 0 .5em ;
+    &:hover{
+      color: $DarkGrayishBlue;
+    }
+  }
+}

@@ -1,3 +1,14 @@
+@import './config';
 body{
-  background-color: red;
+  font-family: 'Be Vietnam', sans-serif;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  font-size: 16px;
+  background-color: $VaryLightGray;
 }
+@import'./header';
+@import'./hero';
+@import'./what';
+@import'./said';
+@import'./banner';
+@import'./footer';

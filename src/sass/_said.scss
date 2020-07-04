@@ -1,0 +1,46 @@
+.said{
+  margin: 10em 0;
+  text-align: center;
+  &__title{
+  @include titleH2;
+  margin-bottom: 3em;
+  }
+  &__btn{
+    @include button;
+  }
+  .card-deck{
+    scroll-snap-type: x mandatory;
+    .slider-scroll{
+      display: flex;
+      width: 400%;
+      margin: 0;
+      padding: 0;
+    }
+  .card{
+    margin: 0;
+    width: 100%;
+    padding-top: 2em;
+    scroll-snap-align: center;
+    z-index: -1;
+    // border: 0;
+  &-container{
+    margin: 0 1em;
+  }
+    &-title{
+    font-size: 1em;
+      @include titleH2;
+    }
+    &-text{
+      @include description;
+      font-size: .9em;
+      font-weight: 500;
+    }
+    &-img-top{
+      width: 50px;
+      height: 50px;
+      position: relative;
+      top: 20px;
+    }
+  }
+  }
+}

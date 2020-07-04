@@ -1,0 +1,31 @@
+.hero{
+  display: flex;
+  border: 1px solid blue;
+  padding: 0;
+  margin: 2em 0 ;
+  &__container1{
+    border: 1px solid green ;
+    width: 50%;
+    padding: 5em 0;
+
+  }
+  &__title{
+    padding: 0 3em 0 0;
+    color: $VeryDarkBlue;
+    font-weight: 700;
+    margin-bottom: 1em;
+  }
+  &__description{
+    padding: 0 12.5em 0 0;
+    margin-bottom: 2em;
+    color: $DarkGrayishBlue;
+  }
+  &__button{
+    @include button;
+  }
+  &__container2{
+    border: 1px solid red ;
+    width: 50%;
+    background: url(../assets/images/illustration-intro.svg) center;
+  }
+}
