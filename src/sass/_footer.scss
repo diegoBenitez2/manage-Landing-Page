@@ -2,19 +2,24 @@
 background: $VeryDarkBlue;
   &__container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr .7fr .7fr 1.2fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "logo list1 list2 email"
                          "social list1 list2 copy";
+    padding: 4em 0;
   }
   &__logo{
     grid-area: logo;
   }
   .list-group{
-  &-item{
-    background: $VeryDarkBlue;
-    color:$VaryLightGray ;
-  }
+    &-item{
+      background: $VeryDarkBlue;
+      color:$VaryLightGray ;
+      cursor: pointer;
+      &:hover{
+        color: $BrightRed ;
+      }
+    }
   
     &:nth-of-type(1){
       grid-area: list1 ;
@@ -30,9 +35,109 @@ background: $VeryDarkBlue;
   &__social{
     display: flex;
     grid-area: social;
+    align-self: flex-end;
+    img{
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: 1em;
+      cursor: pointer;
+    }
+  }
+  &__email{
+    border-radius: 30px;
+    padding: 1em .5em;
+    outline: 0;
+    width: 100%;
+    &:invalid{
+      border: 3px solid $BrightRed;
+    }
+    &::-webkit-input-placeholder{
+      color: $BrightRed;
+      font-style: italic;;
+    }
+  }
+  .email_error{
+    color:$BrightRed ;
+    font-size: .8em;
+    padding: 0;
+    margin: 0 2em;
+    font-style: italic;
+    .active{
+      padding: 1em;
+    }
+  }
+  &__btn{
+    @include button;
+    box-shadow: initial;
+    border-radius: 30px;
+    margin-left: 1em;
+    height: 58px;
+    padding: 0 2.5em;
+    outline: 0;
   }
   &__copy{
     grid-area: copy;
-    color: white;
+    color: $DarkGrayishBlue;
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin: 0;
+  }
+  @include media-medium{
+    &__container{
+      grid-template-rows: .5fr 1fr;
+      grid-template-areas: "email email list1 list2"
+                         "logo social  list1 list2";
+    }
+    &__email{
+      margin-bottom: 2em;
+    }
+    &__logo{
+      align-self: center;
+    }
+    &__social{
+      align-self: center;
+      margin-left: 2em;;
+    }
+    
+    &__copy{
+      display: none;
+    }
+  }
+  @include media-small{
+  padding:0;
+  &__container{
+    grid-template-rows: .5fr 1fr .5fr .5fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "email email"
+                         "list1 list2"
+                         "social social"
+                         "logo  logo" 
+                         ;
+  }
+  .list-group{
+    padding-left: 4em;
+  }
+  &__form{
+    justify-content: center;
+    label{
+      width: 70%;
+    }
+  }
+
+  &__email{
+    padding: .7em .5em;
+  }
+  &__logo{
+    justify-self: center;
+    align-self: flex-end;
+  }
+  &__social{
+  margin-top: 2em;
+    justify-content: space-between;
+    img{
+      width: 2.5em;
+      height: 2.5em;
+    }
+  }
   }
 }

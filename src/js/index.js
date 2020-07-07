@@ -1,24 +1,45 @@
 import '../sass/index.scss'
-let imgs = new Array().fill(0)
-import logo  from '../assets/images/logo.svg'
-import img1  from '../assets/images/avatar-ali.png'
-import img2  from '../assets/images/avatar-anisha.png'
-import img3  from '../assets/images/avatar-shanai.png'
-import img4  from '../assets/images/avatar-richard.png'
-imgs[0] = img1
-imgs[1] = img2
-imgs[2] = img3
-imgs[3] = img4
-const $imgLogo = document.getElementById('logo');
-const $img = document.getElementsByClassName('card-img-top');
-
-$imgLogo.setAttribute('src',logo)
-function setAttribute($element,$attribute) {
-  for(let i = 0; i < imgs.length; i++){
-    $element[i].setAttribute('src',$attribute[i])
+import '../assets/images/logo.svg'
+import '../assets/images/avatar-ali.png'
+import  '../assets/images/avatar-anisha.png'
+import '../assets/images/avatar-shanai.png'
+import '../assets/images/avatar-richard.png'
+import '../assets/images/icon-facebook.svg'
+import '../assets/images/icon-youtube.svg'
+import '../assets/images/icon-twitter.svg'
+import '../assets/images/icon-pinterest.svg'
+import '../assets/images/icon-instagram.svg'
+//Download DOM elements
+const $email = document.getElementById('email')
+const $msgError = document.getElementById('msg-email')
+const $form = document.querySelector('form')
+//form actions
+$email.addEventListener('input',(event)=>{
+  if($email.validity.valid){
+    $msgError.innerHTML = ""
+    $msgError.className = "email_error"
+  }
+  else{
+    showError()
+  }
+})
+$form.addEventListener('submit',(event)=>{
+  if(!$email.validity.valid){
+    showError()
+    event.preventDefault()
+  }
+})
+function showError(){
+  $msgError.classList.add('active')
+  if($email.validity.valueMissing){
+  $msgError.textContent = 'You must enter an email address.'
+  }
+  else if ($email.validity.typeMismatch){
+  $msgError.textContent = 'Please, insert a valid email'
   }
 }
-setAttribute($img,imgs)
+
+
 
 
 

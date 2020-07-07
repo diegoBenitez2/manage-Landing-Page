@@ -26,6 +26,25 @@
   &__container2{
     border: 1px solid red ;
     width: 50%;
-    background: url(../assets/images/illustration-intro.svg) center;
+    background: url(../assets/images/illustration-intro.svg) center no-repeat;
+  }
+  @include media-medium{
+    display: block; 
+    &__container1{
+      width: 100%;
+      text-align: center;
+      padding: 1em;
+    }
+    &__container2{
+      height: 50vw;
+      width: 100%;
+      background-size: 70%;
+    }
+    &__title{
+      padding: 0;
+    }
+    &__description{
+      padding: 0;
+    }
   }
 }

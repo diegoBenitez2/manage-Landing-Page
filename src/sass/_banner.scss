@@ -26,5 +26,9 @@
     }
   }
     
-
+  @include media-medium-small{
+    &__title{
+      padding-right: 1em;
+    }
+  }
 }

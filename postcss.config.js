@@ -1,5 +1,8 @@
 module.exports = {
   plugins:[
-   require ('postcss-cssnext')
+   require ('postcss-cssnext'),
+   require('autoprefixer')({
+    grid: true
+   }),
   ]
 }

@@ -41,6 +41,39 @@
   .row-md-4 {
     margin-bottom: 2em;
   }
+  @include media-medium{
+    &__description{
+      padding: 0;
+      &__asnwer{
+        padding-right: 4em;
+      }
+    }
+  }
+  @include media-medium-small{
+  display: block;
+    &__btn{
+      font-size: .7em;
+    }
+    &__description{
+    width: 100%;
+    &__question{
+      text-align: center;
+    }
+      &__asnwer{
+        font-size: .9em;
+      text-align: center;
+      padding: 0 1em;
+      }
+    }
+    &__list{
+      width: 100%;
+    }
+    .list__description{
+      &_items{
+        font-size: .9em;
+      }
+    }
+  }
   
 }
   

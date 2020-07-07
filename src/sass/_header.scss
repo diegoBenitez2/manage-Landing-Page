@@ -1,10 +1,15 @@
 .header{
-  display: flex;
-  margin: 0;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid red;
-  padding: 2em 0;
+  margin-bottom: 4em;
+  // border: 1px solid green;
+  background: url('../assets/images/bg-tablet-pattern.svg')  170%  150% no-repeat; 
+  background-size: 70%;
+  padding: 0;
+  &__container{
+  padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   &__button{
     @include button;
   }
@@ -15,5 +20,20 @@
     &:hover{
       color: $DarkGrayishBlue;
     }
+  }
+  @include media-medium{
+    background: url('../assets/images/bg-tablet-pattern.svg')  200% -70% no-repeat; 
+    &__button{
+      display: none;
+    }
+    .navbar-toggler{
+      border: 0;
+      color: $VeryDarkBlue;
+      font-weight: bold;
+      outline: 0;
+    }
+  }
+  @include media-medium-small{
+    background-position: -100% -200%;
   }
 }

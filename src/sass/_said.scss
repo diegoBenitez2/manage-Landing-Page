@@ -2,8 +2,8 @@
   margin: 10em 0;
   text-align: center;
   &__title{
-  @include titleH2;
-  margin-bottom: 3em;
+    @include titleH2;
+    margin-bottom: 3em;
   }
   &__btn{
     @include button;
@@ -23,9 +23,9 @@
     scroll-snap-align: center;
     z-index: -1;
     // border: 0;
-  &-container{
-    margin: 0 1em;
-  }
+    &-container{
+      margin: 0 1em;
+    }
     &-title{
     font-size: 1em;
       @include titleH2;
@@ -42,5 +42,8 @@
       top: 20px;
     }
   }
+  }
+  @include media-medium-small{
+    margin: 6em 0;
   }
 }
