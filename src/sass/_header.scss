@@ -26,14 +26,49 @@
     &__button{
       display: none;
     }
-    .navbar-toggler{
-      border: 0;
-      color: $VeryDarkBlue;
-      font-weight: bold;
-      outline: 0;
+    .navbar{
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      display: block;
+      text-align: center;
+      .navbar-nav{
+        background:$VaryLightGray;
+        border: 0;
+      }
+        .navbar-toggler{
+          position: relative;
+          top: 10px;
+          left: 350px;
+          border: 0;
+          color: $VeryDarkBlue;
+          font-weight: bold;
+          outline: 0;
+        }
+        #navbarNav{
+          margin-top: 5em;
+        }
+    }
+    .overlay{
+      background: linear-gradient(150deg,transparent, rgba(0,0,0,.5)) ;
     }
   }
+      
   @include media-medium-small{
     background-position: -100% -200%;
+    .navbar{
+      .navbar-toggler{
+        left: 250px;
+      }
+    }
+  }
+  @include media-small-small{
+    .navbar{
+      .navbar-toggler{
+        left: 150px;
+      }
+    }
   }
 }

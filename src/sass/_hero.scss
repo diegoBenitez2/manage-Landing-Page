@@ -2,7 +2,7 @@
   display: flex;
   border: 1px solid blue;
   padding: 0;
-  margin: 2em 0 ;
+  margin:  0 ;
   &__container1{
     border: 1px solid green ;
     width: 50%;
@@ -32,19 +32,27 @@
     display: block; 
     &__container1{
       width: 100%;
-      text-align: center;
       padding: 1em;
+      margin: 0 auto;
+      text-align: center;
     }
     &__container2{
+      background-size: 70%;
       height: 50vw;
       width: 100%;
-      background-size: 70%;
     }
     &__title{
       padding: 0;
     }
     &__description{
+      width: 80%;
       padding: 0;
+      margin: 0 auto 2em;
     }
+  }
+  @include media-small{
+    &__container2{
+    background-size: 55%;
+  }
   }
 }

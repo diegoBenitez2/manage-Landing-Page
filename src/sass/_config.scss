@@ -1,12 +1,12 @@
 //Colors
-$BrightRed: #f25f3a;
-$DarkBlue: #242d52;
+$BrightRed: hsl(12, 88%, 59%);
+$DarkBlue: hsl(228, 39%, 23%);
 
 // ### Neutral
 
 $DarkGrayishBlue: hsl(227, 12%, 61%);
 $VeryDarkBlue: hsl(233, 12%, 13%);
-$VaryLightGray: #fafafa;
+$VaryLightGray: hsl(0, 0%, 98%);
 //media querys
 @mixin media-forms {
   @media(max-width:1199px){ @content}
@@ -24,7 +24,7 @@ $VaryLightGray: #fafafa;
 };
 @mixin media-small-small {
   @media (max-width:375px){@content}
-};
+};  
   @mixin button{
   background: $BrightRed;
   border-radius: 20px;

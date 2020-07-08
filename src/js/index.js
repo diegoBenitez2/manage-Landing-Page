@@ -9,10 +9,13 @@ import '../assets/images/icon-youtube.svg'
 import '../assets/images/icon-twitter.svg'
 import '../assets/images/icon-pinterest.svg'
 import '../assets/images/icon-instagram.svg'
-//Download DOM elements
+//load DOM elements
 const $email = document.getElementById('email')
 const $msgError = document.getElementById('msg-email')
 const $form = document.querySelector('form')
+const $btnNavBar = document.querySelector('button.navbar-toggler')
+const $navBar = document.querySelector('nav.navbar')
+const $body = document.querySelector('body')
 //form actions
 $email.addEventListener('input',(event)=>{
   if($email.validity.valid){
@@ -38,6 +41,11 @@ function showError(){
   $msgError.textContent = 'Please, insert a valid email'
   }
 }
+//overlay and event click navBar
+$btnNavBar.addEventListener('click',()=>{
+  $navBar.classList.toggle('overlay')
+  $body.classList.toggle('scroll-hidden')
+})
 
 
 

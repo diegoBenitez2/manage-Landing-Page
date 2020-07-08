@@ -6,6 +6,9 @@ body{
   font-size: 16px;
   background-color: $VaryLightGray;
 }
+.scroll-hidden{
+  overflow-y: hidden;
+}
 @import'./header';
 @import'./hero';
 @import'./what';

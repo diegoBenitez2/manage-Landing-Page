@@ -6,8 +6,8 @@
   justify-content: space-between;
 }
   &__title{
+    width: 80%;
     color: $VaryLightGray;
-    padding-right: 5em;
     position: relative;
     font-weight: 700;
     font-size: 2em;
@@ -26,9 +26,14 @@
     }
   }
     
-  @include media-medium-small{
-    &__title{
-      padding-right: 1em;
+  @include media-small-small{
+    .container{
+      display: block !important;
+      text-align: center;
     }
-  }
+    &__title{
+      margin: 0 auto 1em;
+    }
+
+}
 }

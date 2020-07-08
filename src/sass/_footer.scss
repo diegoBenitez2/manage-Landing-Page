@@ -133,10 +133,10 @@ background: $VeryDarkBlue;
   }
   &__social{
   margin-top: 2em;
-    justify-content: space-between;
+    justify-content: space-evenly;
     img{
-      width: 2.5em;
-      height: 2.5em;
+      width: 100% /5;
+      height: 100% /5;
     }
   }
   }
