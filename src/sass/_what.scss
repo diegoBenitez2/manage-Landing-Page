@@ -6,7 +6,6 @@
     height: 3em;
   }
    &__description{
-    border: 1px solid blue;
     width: 55%;
     padding-right: 10em;
     &__question{
@@ -19,7 +18,6 @@
     }
   }
   &__list{
-    border: 1px solid red;
     width: 45%;
     .list{
       &__description{

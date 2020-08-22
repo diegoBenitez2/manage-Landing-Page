@@ -5,7 +5,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 const basePath = __dirname
 const distPath = 'dist'
 const sourcePath = './src/js/index.js'
-const indexInput = './src/index.html'
+const indexInput = './index.html'
 const indexOutput = 'index.html'
 module.exports={
 // mode:'development',
@@ -20,7 +20,7 @@ output:{
   filename:'js/[name].js'
 },
 devServer:{
-  contentBase : path.join(basePath,distPath),
+   // contentBase: path.join(__dirname,'dist'),
   open: true
 },
 

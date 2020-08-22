@@ -1,10 +1,8 @@
 .hero{
   display: flex;
-  border: 1px solid blue;
   padding: 0;
   margin:  0 ;
   &__container1{
-    border: 1px solid green ;
     width: 50%;
     padding: 5em 0;
 
@@ -24,7 +22,6 @@
     @include button;
   }
   &__container2{
-    border: 1px solid red ;
     width: 50%;
     background: url(../assets/images/illustration-intro.svg) center no-repeat;
   }
